@@ -1,0 +1,200 @@
+@font-face {
+  font-family: Fortnite;
+  src: url('../burbankbigcondensed_bold.otf');
+}
+
+body {
+  margin: 0;
+  font-family: Fortnite;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav {
+  padding: 0px 100px;
+}
+
+a, span, p, li {
+  font-size: 1.3rem;
+}
+
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.page-footer {
+  padding-top: 0;
+}
+
+body {
+  background-image: url("https://cdn2.unrealengine.com/chica-bg-2048x1024-f95945a6a807.png");
+  background-attachment: fixed;
+  /*background-color: #e3f2fd;*/
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: white;
+  opacity: 30%;
+  margin: 15px 0px 15px 0px;
+}
+
+.goodDescription {
+  padding-bottom: 15px;
+}
+
+.card {
+  background-color: #060B32;
+  color: white;
+  border-radius: 5px;
+}
+
+.card .card-image img {
+  border-radius: 7px 7px 0 0;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  z-index: 5;
+}
+
+.cart .material-icons {
+  margin-top: 7px;
+}
+
+@media (min-width: 767px) {
+  .cart {
+    top: 5rem;
+    bottom: unset;
+  }
+}
+
+.collection {
+  border: 0px;
+}
+
+.cart-list {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem;
+  max-width: 95%;
+  z-index: 7;
+  background-position: center;
+  background-image: url("images/wallpapersden.com_fortnite-battle-royale-chapter-2_1920x1075 (2).jpg");
+  animation: show 0.4s ease-in-out;
+}
+
+.cart-list a {
+  color: #060B32;
+}
+
+.cart-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: white;
+}
+
+.cart-delete {
+  cursor: pointer;
+}
+
+.collection .collection-item {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.collection a.collection-item:not(.active):hover {
+  background-color: #dddddd3b;
+}
+
+@keyframes show {
+  from {
+    top: 50%;
+    opacity: 0;
+  }
+  to {
+    top: 30%;
+    opacity: 1;
+  }
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  flex-basis: fit-content;
+}
+
+#alert-container {
+  top: 5rem;
+  right: 10rem;
+  animation: fade-in 0.25s ease-in-out;
+  background: linear-gradient(#42b6f5, #46aae0);
+  background-color: rgba(255, 255, 255, 0);
+  transform: skew(-5deg);
+  display:block;
+  position: fixed;
+  z-index: 10000;
+}
+
+.alert p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+}
+
+@keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+}
